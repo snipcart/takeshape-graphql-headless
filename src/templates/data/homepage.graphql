@@ -1,0 +1,14 @@
+query {
+    entries: getEntryList(sort:{field:"_createdAt", order: "desc"}) {
+        items {
+        message,
+        _createdAt
+        }
+    }
+    home: getHome {
+        headerHtml,
+        heroImage {
+            path,
+        }
+    }
+}

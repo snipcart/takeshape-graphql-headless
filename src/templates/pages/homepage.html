@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gratitude Journal</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="site.css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <section class="header">
+                {% if home.heroImage %}
+                    <div class="header__image">
+                        <img src="{{ home.heroImage.path | image({w: 1140, h: 500, q: 90, crop: 'faces'}) }}" />
+                    </div>
+                {% endif %}
+                
+                <div class="header__intro">
+                    {{ home.headerHtml | safe }}
+                </div>
+            </section>
+
+            <section class="entries">
+                <ul class="entries__list">
+                    {% for entry in entries.items %}
+                        <li class="entries__list__item quote__container">
+                            <p class="quote">
+                                {{ entry.message }}
+                            </p>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </section>
+
+            <form class="form-group">
+                <div id="success-message" class="alert alert-success" role="alert" style="display: none">
+                    Thank you for the contribution, we'll review it and it will be visible on the site shortly if approved.
+                </div>
+                <input type="message" class="form-control form-control-lg" id="message" placeholder="Type what you are grateful for and press Enter">
+                <button type="submit" style="visibility: hidden">Submit</button>
+            </form>
+
+            <footer class="footer text-center">
+                Built with ♥ by Snipcart.
+            </footer>
+            
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
