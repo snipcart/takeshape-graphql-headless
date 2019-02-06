@@ -3,10 +3,20 @@
 h1 {
     font-family: 'Montserrat', sans-serif;
     margin: 1em 0;
+    text-align: center;
+}
+
+.header__intro {
+    width: 30em;
+    margin: 0 auto;
 }
 
 .header {
     font-family: 'Montserrat', sans-serif;
+}
+
+.header__image {
+    text-align: center;
 }
 
 .entries__list {
@@ -56,4 +66,10 @@ h1 {
 
 .footer {
     margin-bottom: 1em;
+}
+
+.message__input {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    padding: 1em;
 }
