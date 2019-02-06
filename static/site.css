@@ -76,4 +76,12 @@ h1 {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     padding: 1em;
+    width: 100%;
+    border: none;
+    background-color: #FFFFFC;
+    box-shadow: 5px 5px 30px 0px rgba(198,209,191,0.75);
+}
+
+.message__input:focus {
+    outline: none;
 }
