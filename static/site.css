@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond|Montserrat');
 
+body {
+    background-color: #F8FFF7;
+}
+
 h1 {
     font-family: 'Montserrat', sans-serif;
     margin: 1em 0;
