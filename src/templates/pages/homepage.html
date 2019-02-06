@@ -25,6 +25,14 @@
                 </div>
             </section>
 
+            <form class="message__form form-group">
+                <div id="success-message" class="alert alert-success" role="alert" style="display: none">
+                    Thank you for the contribution, we'll review it and it will be visible on the site shortly if approved.
+                </div>
+                <input autocomplete="off" type="message" class="message__input" id="message" placeholder="Type what you are grateful for and press Enter">
+                <button type="submit" style="visibility: hidden">Submit</button>
+            </form>
+
             <section class="entries">
                 <ul class="entries__list">
                     {% for entry in entries.items %}
@@ -36,14 +44,6 @@
                     {% endfor %}
                 </ul>
             </section>
-
-            <form class="form-group">
-                <div id="success-message" class="alert alert-success" role="alert" style="display: none">
-                    Thank you for the contribution, we'll review it and it will be visible on the site shortly if approved.
-                </div>
-                <input autocomplete="off" type="message" class="message__input" id="message" placeholder="Type what you are grateful for and press Enter">
-                <button type="submit" style="visibility: hidden">Submit</button>
-            </form>
 
             <footer class="footer text-center">
                 Made w/ ♥ & <a href="https://takeshape.io">TakeShape</a> by <a href="https://snipcart.com">Snipcart</a>

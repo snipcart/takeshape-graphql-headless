@@ -85,3 +85,7 @@ h1 {
 .message__input:focus {
     outline: none;
 }
+
+.message__form {
+    margin-top: 4rem;
+}
